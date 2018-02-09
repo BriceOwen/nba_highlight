@@ -5,9 +5,12 @@ const settings = {
     arrows: false,
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000, 
+    pauseOnHover: true
 }
 
 const generateSlides = ({slides}) => {
