@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Featured from './Featured';
-
+import Subscriptions from './Subscriptions';
 
 const URL_HOME = 'http://localhost:3004/home';
 
@@ -16,18 +16,17 @@ class Home extends Component {
 
     componentDidMount() {
         fetch(URL_HOME, {method: 'get'})
-        .then(response => response.json())
-        .then(json => {
-            this.setState({
-                home: json
-            });
-        })
+            .then(response => response.json())
+            .then(json => {
+                this.setState({home: json});
+            })
     }
 
     render() {
         return (
             <div>
                 <Featured slides={this.state.home.slider}/>
+                <Subscriptions/>
             </div>
         )
     }

@@ -1,7 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-
 const settings = {
     arrows: false,
     dots: false,
@@ -17,10 +16,12 @@ const generateSlides = ({slides}) => {
             <Slider {...settings}>
                 {slides.map(item => {
                     return (
-                        <div key={item.id}
+                        <div
+                            key={item.id}
                             className="item-slider"
-                            style={{background: `url(/images/covers/${item.cover})`}}
-                        >
+                            style={{
+                            background: `url(/images/covers/${item.cover})`
+                        }}>
                             <div className="caption">
                                 <h4>{item.topic}</h4>
                                 <p>{item.title}</p>
