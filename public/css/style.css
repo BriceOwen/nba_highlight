@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #59889b;
+    background-color: #fafbfc; 
+}
+
+.flexbox-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+    color: #004865;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 20px 0 5px
+}
+
+a {
+    text-decoration: none;
+}
+
+/*==========================================
+                HEADER FOOTER
+============================================*/
+
+header {
+    _border-bottom: 1px solid #e2e2e2;
+    box-shadow: 0 2px 21px 0 rgba(0, 72, 101, 0.07);
+}
+
+header, footer {
+    background-color: #fff;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+header .logo,
+footer .logo {
+    flex-grow: 1;
+    height: 22px;
+}
+
+header a {
+    color: #59889b;
+    transition: all .25s ease-in;
+}
+
+header a:hover {
+    color: #004865;
+}
+
+header .logo span,
+footer .logo span {
+    background: url('/images/logo.png') no-repeat;
+    display: inline-block;
+    width: 58px;
+    height: 24px;
+}
+
+footer {
+    background-color: #1f1f1f;
+    margin-top: 30px;
+}
