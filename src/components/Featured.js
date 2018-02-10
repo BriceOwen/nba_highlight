@@ -9,7 +9,7 @@ const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000, 
+    autoplaySpeed: 4000,
     pauseOnHover: true
 }
 
@@ -38,12 +38,13 @@ const generateSlides = ({slides}) => {
 }
 
 const Featured = (props) => {
-    console.log(props)
+
     return (
         <div>
             {generateSlides(props)}
         </div>
     )
+
 }
 
 export default Featured;
