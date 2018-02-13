@@ -17,6 +17,7 @@ const Blocks = (props) => {
                         <div className={`item ${item.type}`}>
                             <div className="veil"></div>
                             <img
+                                alt={item.name}
                                 className="image" 
                                 src={`/images/blocks/${item.image}`}
                             />

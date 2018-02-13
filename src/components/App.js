@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
+import Teams from './Teams';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <div>
           <Header/>
           <Route exact path="/" component={Home}/>
+          <Route path="/teams" component={Teams}/>
           <Footer/>
         </div>
       </BrowserRouter>
