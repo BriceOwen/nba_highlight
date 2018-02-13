@@ -14,7 +14,7 @@ class Subscriptions extends Component {
         const URL_EMAIL = `http://localhost:3004/subscriptions`;
 
         fetch(URL_EMAIL, {
-            method: 'post',
+            method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

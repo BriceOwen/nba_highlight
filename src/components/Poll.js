@@ -12,7 +12,7 @@ class Poll extends Component {
     }
 
     fetchPoll() {
-        fetch(`${URL_TEAMS}?poll=true&_sort=count&_order=desc`, {method: 'get'})
+        fetch(`${URL_TEAMS}?poll=true&_sort=count&_order=desc`, {method: 'GET'})
         .then(response => response.json())
         .then(json => {
             this.setState({
