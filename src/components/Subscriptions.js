@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 class Subscriptions extends Component {
     constructor(props) {
@@ -26,7 +28,8 @@ class Subscriptions extends Component {
             this.setState({
                 email: '',
                 success: true
-            })
+            });
+            this.notifySuccess();
         });
     }
 
@@ -49,6 +52,7 @@ class Subscriptions extends Component {
             this.saveSubscripton(email);
         } else {
             this.setState({error: true});
+            this.notifyError();
         }
 
         this.clearMessages();
@@ -57,6 +61,10 @@ class Subscriptions extends Component {
     onChangeInput = (event) => {
         this.setState({email: event.target.value});
     }
+
+    notifyError = () => toast.error("Check your email."); 
+
+    notifySuccess = () => toast.success("Thanks for subscribe.");
 
     render() {
         return (
@@ -70,8 +78,7 @@ class Subscriptions extends Component {
                             value={this.state.email}
                             onChange={this.onChangeInput}
                         />
-                        <div className={this.state.error ? "error show":"error"}>Check your email</div>
-                        <div className={this.state.success ? "success show":"success"}>Thank you</div>
+                        <ToastContainer />
                     </form>
                 </div>
                 <small>
